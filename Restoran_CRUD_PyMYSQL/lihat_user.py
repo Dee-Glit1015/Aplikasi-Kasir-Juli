@@ -6,7 +6,6 @@ connection = pymysql.connect(
     password='',
     db='db_restoran',
 )
-
 try:
     with connection.cursor() as cursor:
         sql ="SELECT kd_user, nama, no_hp, username, password 'desc' FROM tb_user"
