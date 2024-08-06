@@ -22,7 +22,7 @@ connection = pymysql.connect (
 )
 try :
     with connection.cursor () as cursor :
-        sql = "SQL kd_kategori, kategori, 'desc' FROM tb_kategori"
+        sql = "SELECT kd_kategori, kategori, 'desc' FROM tb_kategori"
         try :
             cursor.execute (sql)
             result = cursor.fetchall ()
