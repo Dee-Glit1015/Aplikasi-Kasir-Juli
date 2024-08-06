@@ -7,14 +7,12 @@ connection = pymysql.connect (
     db ='db_restoran',
 )
 
-    print ("+-----------------------------")
-    kd_user = input ("Kd Kategori :")
-    nama = input ("Nama :")
-    no_hp = input ("No Hp :")
-    username = input ("Username:")
-    password = input ("Password :")
-    print ("+------------------------------------+")
-    try :
+kd_user = input ("Kode User:")
+nama = input ("Nama :")
+no_hp = input ("No Hp :")
+username = input ("Username:")
+password = input ("Password :")
+try :
     with connection.cursor () as cursor :
         sql = "INSERT INTO tb_user VALUES (%s, %s, %s, %s, %s)"
         try :
@@ -22,6 +20,6 @@ connection = pymysql.connect (
             print ("Berhasil")
         except :
             print ("Gagal")
-    connection.commit()
+        connection.commit()
 finally :
-connnection.close()
+        connection.close()
